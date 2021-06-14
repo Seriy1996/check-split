@@ -6,11 +6,15 @@
     <router-view />
   </main>
   <footer>
-    <a href="#/people"> <i class="material-icons">people</i>Люди</a>
-    <a href="#/receipt"> <i class="material-icons">article</i>Чеки</a>
-    <a href="#/result"
-      ><i class="material-icons">account_balance_wallet</i>Итог</a
-    >
+    <router-link to="/people">
+      <i class="material-icons">people</i>Люди
+    </router-link>
+    <router-link to="/receipt">
+      <i class="material-icons">article</i>Чеки
+    </router-link>
+    <router-link to="/result">
+      <i class="material-icons">account_balance_wallet</i>Итог
+    </router-link>
   </footer>
 </template>
 
@@ -25,7 +29,7 @@
 
 <style>
 * {
-  font-family: "Roboto";
+  font-family: "Roboto",serif;
   -webkit-tap-highlight-color: transparent !important;
   user-select: none;
   box-sizing: border-box;

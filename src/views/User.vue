@@ -1,6 +1,6 @@
 <template>
   <div class="user">
-    <div v-for="user in getUsersFromLocalStorage" :key="user.id" class="user">
+    <div v-for="user in users" :key="user.id" class="user">
       {{ user }}
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
   }),
   computed: {
     ...mapGetters([
-        'getUsersFromLocalStorage'
+        'users'
     ])
   },
   methods: {

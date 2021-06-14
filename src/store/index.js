@@ -45,11 +45,14 @@ export default createStore({
     getters: {
         products(state) {
             return state.products;
-        }
+        },
+        users(state) {
+            return state.users;
+        },
     },
     actions: {
-        getUsersFromLocalStorage({commit}) {
-            return commit;
+        getUsersFromLocalStorage() {
+            return null;
         }
     },
     modules: {}
