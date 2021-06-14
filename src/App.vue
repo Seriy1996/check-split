@@ -6,7 +6,7 @@
     <router-view />
   </main>
   <footer>
-    <router-link to="/people">
+    <router-link to="/user">
       <i class="material-icons">people</i>Люди
     </router-link>
     <router-link to="/receipt">

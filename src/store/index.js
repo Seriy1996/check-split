@@ -12,7 +12,8 @@ export default createStore({
             state.count++;
         },
         addProduct(state, products) {
-            state.products['Products_' + state.count] = products;
+            products.id = 'Products_' + state.count
+            state.products[products.id] = products
             this.commit('increment')
         },
         delProduct(state, products_id) {
@@ -22,7 +23,8 @@ export default createStore({
             state.products[products_id] = products
         },
         addUser(state, users) {
-            state.users['Users_' + state.count] = users;
+            users.id = 'Users_' + state.count
+            state.users[users.id] = users
             this.commit('increment')
         },
         delUser(state, users_id) {
@@ -32,7 +34,8 @@ export default createStore({
             state.users[users_id] = users
         },
         addProductsSplit(state, productsSplit) {
-            state.productsSplit['Users_' + state.count] = productsSplit;
+            productsSplit.id = 'ProductsSplit' + state.count
+            state.productsSplit[productsSplit.id] = productsSplit
             this.commit('increment')
         },
         delProductsSplit(state, productsSplit_id) {
