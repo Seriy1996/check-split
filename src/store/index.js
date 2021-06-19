@@ -1,4 +1,4 @@
-import {createStore} from 'vuex'
+import { createStore } from 'vuex'
 
 export default createStore({
     state: {
@@ -16,33 +16,33 @@ export default createStore({
             state.products[products.id] = products
             this.commit('increment')
         },
-        delProduct(state, products_id) {
-            delete state.products[products_id]
+        delProduct(state, id) {
+            delete state.products[id]
         },
-        editProduct(state, products_id, products) {
-            state.products[products_id] = products
+        editProduct(state, products) {
+            state.products[products.id] = products
         },
         addUser(state, users) {
             users.id = 'Users_' + state.count
             state.users[users.id] = users
             this.commit('increment')
         },
-        delUser(state, users_id) {
-            delete state.users[users_id]
+        delUser(state, id) {
+            delete state.users[id]
         },
-        editUser(state, users_id, users) {
-            state.users[users_id] = users
+        editUser(state, users) {
+            state.users[users.id] = users
         },
         addProductsSplit(state, productsSplit) {
             productsSplit.id = 'ProductsSplit' + state.count
             state.productsSplit[productsSplit.id] = productsSplit
             this.commit('increment')
         },
-        delProductsSplit(state, productsSplit_id) {
-            delete state.productsSplit[productsSplit_id]
+        delProductsSplit(state, id) {
+            delete state.productsSplit[id]
         },
-        editProductsSplit(state, productsSplit_id, productsSplit) {
-            state.productsSplit[productsSplit_id] = productsSplit
+        editProductsSplit(state, productsSplit) {
+            state.productsSplit[productsSplit.id] = productsSplit
         },
     },
     getters: {
